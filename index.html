@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Layout</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div class="logo">
+				Layout
+			</div>
+			
+			<div class="menu__icon">&#9776;</div>
+			
+				<nav class="menu">
+					<a href="#" class="menu__item">html</a>
+					<a href="#" class="menu__item">css</a>
+					<a href="#" class="menu__item">javascript</a>
+				</nav>
+			
+			
+			<div class="center">
+				<button class="btn btn--small">Enter</button>
+			</div>
+			
+			
+		</div>
+	</header>
+	<section >
+		
+	<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+	  <div class="slideshow fade">
+	    
+	    
+	    <div class="container">
+		    <div class="slideshow__item">
+			    <div class="slideshow__box">
+
+			    	<div class="slideshow__text">Monetize <br> your skills now!</div>
+			    	<button class="btn btn--small">Go!</button>
+			    </div>	
+		    </div>	
+	    </div>
+    
+    
+  	</div>
+
+	 <div class="slideshow fade">
+	    
+	    
+	    <div class="container">
+		    <div class="slideshow__item">
+			    <div class="slideshow__box">
+
+			    	<div class="slideshow__text">Monetize <br> your skills now!</div>
+			    	<button class="btn btn--small">Go!</button>
+			    </div>	
+		    </div>	
+	    </div>
+	    
+	</div>
+
+	  <div class="slideshow fade">
+	    
+	    
+	    <div class="container">
+		    <div class="slideshow__item">
+			    <div class="slideshow__box">
+
+			    	<div class="slideshow__text">Monetize <br> your skills now!</div>
+			    	<button class="btn btn--small">Go!</button>
+			    </div>	
+		    </div>	
+	    </div>
+	  </div>
+	  <div class="slideshow fade">
+	    
+	    
+	    <div class="container">
+		    <div class="slideshow__item">
+			    <div class="slideshow__box">
+
+			    	<div class="slideshow__text">Monetize <br> your skills now!</div>
+			    	<button class="btn btn--small">Go!</button>
+			    </div>	
+		    </div>	
+	    </div>
+	  </div>
+	  <div class="slideshow fade">
+	    
+	    
+	    <div class="container">
+		    <div class="slideshow__item">
+			    <div class="slideshow__box">
+
+			    	<div class="slideshow__text">Monetize <br> your skills now!</div>
+			    	<button class="btn btn--small">Go!</button>
+			    </div>	
+		    </div>	
+	    </div>
+	  </div>
+  
+  <!-- Next and previous buttons -->
+  <div class="container">
+  	<a class="prev" onclick="plusSlides(-1)"><img src="src/arrow.svg" alt=""></a>
+  <a class="next" onclick="plusSlides(1)"><img src="src/arrow.svg" alt=""></a>
+  </div>
+  
+
+  <!-- The dots/circles -->
+<div class="slideshow__dots">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span>
+</div>
+</div>
+
+
+
+		
+	</section>
+	<section>
+		<div class="container">
+			<div class="inform">
+				<div class="inform__text">
+					<h2>Something about you</h2>
+					<p>In this section, you can specify any information about yourself, insert your photos, your interests and skills. It is also desirable to use tag canvas.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+				</div>
+				<div class="inform__photo">
+					<div class="inform__inscription">Your photo</div>
+					<img src="src/inform_photo.jpg" alt="inform_photo__img">
+  
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="register">
+		<div class="container">
+			<form action="">
+				<div class="form-field">
+					<div class="form-field__name">Register</div>
+					<input type="email"  name="login" id="login" placeholder="Email" required>
+					<input type="password" name="password" id="password" placeholder="Password" required>
+					
+						
+					<div class="custom-select">
+					  <select>
+					    <option value="0">Country:</option>
+					    <option value="1">Country 1</option>
+					    <option value="2">Country 2</option>
+					    <option value="3">Country 3</option>
+					    <option value="4">Country 4</option>
+					    <option value="5">Country 5</option>
+					    <option value="6">Country 6</option>
+					    <option value="7">Country 7</option>
+					    <option value="8">Country 8</option>
+					  </select>
+					</div>
+					<div class="center">
+						<button class="btn">Enter</button>
+					</div>
+					
+				</div>	
+			</form>
+			
+		</div>
+	</section>
+	<footer>
+		© 2015 layout
+	</footer>
+	<script src="js/slidershow.js"></script>
+	<script src="js/select.js"></script>
+	
+</body>
+</html>

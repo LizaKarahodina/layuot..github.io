@@ -1,0 +1,526 @@
+
+
+$text-width:50%;
+$text-margin:100px;
+$width-header:44px;
+
+*{
+	box-sizing: border-box;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+}
+h2 {
+	font-size: 35px;
+	font-weight: 300;
+	color: #2c3e50;
+}
+p {
+	font-size: 15px;
+	
+	color: #444444;
+	font-weight: 300;
+	line-height: 1.8;
+}
+.container{
+	margin: 0 auto;
+	max-width: 960px;
+	padding: 0 10px;
+}
+header, footer {
+	height: $width-header;
+	background-color: #2c3e50;
+}
+header {
+	
+	& .container{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: relative;
+
+	}
+}
+.logo{
+	width: 140px;
+	height: $width-header;
+	font-family: 'Roboto', sans-serif;
+	background-color: #fff;
+	font-size:25px;
+	text-transform: uppercase;
+	color: #27ae60;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.menu{
+	&__item{
+		padding-right: 39px;
+		color: #fff;
+		font-weight: 400;
+		font-size: 15px;
+		text-decoration: none;
+		transition: 0.6s ease;
+		&:hover{
+				
+				color: #25a55b;
+			}
+	}
+
+	&__icon{
+	display: none;
+	
+}
+}
+.btn{
+	background-color: #25a55b;
+	color: #fff;
+	font-size: 15px;
+	font-weight: 500;
+	text-transform: uppercase;
+	border: none;
+	border-radius: 2px;
+	height: 34px;
+	min-width: 90px;
+	
+	&--small{
+		min-width: 80px;
+		width: 80px;
+	}
+	&:hover{
+		background-color: #34be6e;
+	}
+}
+
+
+.inform{
+	display: flex;
+	justify-content: space-between;
+	margin-top:44px;
+	margin-bottom: 130px;
+
+	&__text{
+		width: 50%;
+		margin-right: 100px;
+	}
+	&__photo{
+		width: calc(100% - #{$text-width} - #{$text-margin});
+		display: flex;
+		flex-direction: column;
+		&__inscription{
+			font-size: 11px;
+			font-weight: 300;
+		}
+		&__img{
+			width: 100%;
+			height: auto;
+			display: block;
+		}
+	}
+
+
+}
+
+.register{
+	background: url(../src/bg_form.jpg) center top no-repeat;
+	height: 520px;
+	padding-top: 79px;
+	padding-bottom: 86px;
+}
+
+.form-field{
+	margin: 0 auto;
+	background-color: #fff;
+	max-width: 460px;
+	height: 355px;
+	padding: 28px 80px 32px 80px;
+
+	&__name{
+		font-size: 35px;
+		font-weight: 100;
+		text-align: center;
+		line-height: 1;
+		margin: 23px;
+	}
+}
+
+
+[type="text"],
+[type="email"],
+[type="password"],
+[type="number"],
+[type="tel"],
+[type="url"],
+.select,
+textarea {
+  
+  width: 100%;
+  height: 50px;
+  box-sizing: border-box;
+   -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  padding-left:20px;
+  padding-right: 20px;
+  border-radius: 2px;
+  border: none;
+  border-top: 1px solid #c4c4c4;
+  background-color: #f5f5f5;
+  margin-bottom: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  
+  color: #555555;
+
+}
+[type="text"]:focus, 
+[type="email"]:focus,
+[type="password"]:focus, 
+[type="number"]:focus,
+[type="tel"]:focus,
+[type="url"]:focus,
+textarea:focus{
+box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  padding-left:20px;
+  padding-right: 20px;
+  
+  border-top: 1px solid rgba(81, 203, 238, 1);
+}
+
+
+.custom-select {
+  position: relative;
+  width:100%;
+  margin-bottom: 20px;
+  	&  select {
+	  display: none; /*hide original SELECT element:*/
+	}
+}
+
+.select-selected {
+  background-color: #f5f5f5;
+  border-top: 1px solid #c4c4c4;
+  border-radius: 2px;
+  box-sizing: border-box;
+  height: 50px;
+  &:after {
+	  position: absolute;
+	  content: "";
+	  top: 50%;
+	  transform: translate(0,-50%);
+	  right: 10px;
+	  width: 0;
+	  height: 0;
+	  border: 6px solid transparent;
+	  border-color: #555555 transparent transparent transparent;
+
+	}
+	&.select-arrow-active{
+		
+		&:after {
+		  border-color: transparent transparent #555555 transparent;
+		  top: 40%;
+	  		transform: translate(0,-50%);
+		}
+	}
+	
+  
+}
+
+
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  	color: #555555;
+  	padding-left: 20px;
+  	padding-top: 10px;
+	
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 20px;
+	box-sizing: border-box;
+  
+  
+  cursor: pointer;
+}
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: #fff;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 150px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  border:1px solid #c4c4c4;
+  border-radius:2px;
+  z-index: 99;
+  &::-webkit-scrollbar
+{
+	width: 3px;
+	background-color: #dddddd;
+}
+&::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+&::-webkit-scrollbar-thumb
+{
+	border-radius: 3px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555555;
+}
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+.select-items div{
+  box-sizing:border-box;
+  border-bottom: 1px solid #c4c4c4;
+  height:50px;
+}
+.select-items div:hover {
+  background-color: #f5f5f5;
+}
+
+.center{
+	display: flex;
+	justify-content: center;
+}
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 300;
+	font-size: 15px;
+	color: #fff;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  
+  position: relative;
+  margin: 0;
+   height: 420px;
+   & .container{
+    position: relative;
+   }
+  
+}
+
+/* Hide the images by default */
+.slideshow {
+    background: url(../src/img.jpg) center top no-repeat;
+    background-size: cover;
+    height: 420px;
+    display: none;
+    position: relative;
+    &__img{
+      
+      position: absolute;
+      width: 100%;
+      height: 420px;
+      top:0;
+      left: 0;
+      z-index: -1;
+    }
+
+    &__box{
+      display: flex;
+      margin-top: 100px;
+      margin-right: 100px;
+      width: 360px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+    }
+    &__text{
+      font-family: 'Roboto', sans-serif;
+      font-size: 55px;
+      font-weight: 100;
+      line-height: 1.45;
+      text-align: center;
+
+    }
+    &__item{
+      display: flex;
+      justify-content: flex-end;
+    }
+    
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  
+  border-radius: 0 3px 3px 0;
+  transition: 0.6s ease;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  transform: translate(0, -350%);
+}
+
+.prev{
+  transform: translate(0, -350%) rotate(180deg);
+}
+
+/* On hover, add a black background color with a little bit see-through */
+ .next:hover {
+  
+   transform: translate(0, -350%) scale(1.5);
+  
+}
+
+.prev:hover {
+  transform:  translate(0, -350%) rotate(180deg)  scale(1.5);
+}
+
+
+
+
+.slideshow__dots{
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%);
+}
+/* The dots/bullets/indicators */
+.dot {
+
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+  
+  background-color: #6e807b;
+
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #2c3e50;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@media (max-width: 767.98px) { 
+
+	p {
+	font-size: 24px;
+	
+	}
+	
+	.inform{
+		
+		justify-content:center;
+        flex-wrap: wrap;
+		&__text{
+			width: 90%;
+			margin-bottom: 30px;
+			margin: 0 auto  30px auto;
+
+			
+		}
+		&__photo{
+		width: 380px;
+		
+		&__inscription{
+			font-size: 16px;
+			
+		}
+	}
+		
+	}
+	header {
+	& .btn{
+		display: none;
+	}
+
+}
+	
+	
+	.menu__icon{
+		display: block;
+		color: #fff;
+		background-color: #25a55b;
+		border-radius: 2px;
+		height: 34px;
+		width: 34px;
+		text-align: center;
+		margin: 0;
+		font-size:24px;
+		order: 2;
+		&:hover + .menu{
+			display:block;
+			width: 100%;
+			position: absolute;
+			top:100%;
+			left:0;
+			z-index: 10;
+		}
+
+	}
+	.menu{
+		display: none;
+		&__item{
+			display: block;
+			width: 100%;
+			height: 40px;
+			font-size: 24px;
+			background-color:rgba(44,62,80,0.8);
+			text-align: center;
+			padding-top: 8px;
+			&:hover{
+				background-color:rgba(44,62,80,1);
+				color: #25a55b;
+			}
+		}
+	}
+	.slideshow__box{
+		margin-right: 0;
+	    margin-top: 50px;
+	      
+	}
+}
+
+
